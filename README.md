@@ -16,10 +16,14 @@ This script automates the backup and upgrade process for PaperCut MF, a print ma
 2. Open PowerShell and navigate to the directory containing the script.
 3. Run the script using the following command:
 
-   ```.\papercut-upgrade.ps1```
+```powershell
+   .\papercut-upgrade.ps1
+```   
 
 **Note You may need to set your execution policy to unrestricted, alternatively run the following command within the working directory of the papercut-upgrade.ps1 script.**
-   ```Set-ExecutionPolicy Bypass -Scope Process; & ".\PaperCutMF-Minor-Release-Upgrade-V22.X.ps1"```
+```powershell
+   Set-ExecutionPolicy Bypass -Scope Process; & ".\PaperCutMF-Minor-Release-Upgrade-V22.X.ps1"
+```
 
 4. Follow the on-screen instructions and monitor the progress.
 
