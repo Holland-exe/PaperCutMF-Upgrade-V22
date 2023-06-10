@@ -89,12 +89,12 @@ if (Test-Path -Path $exePath -PathType Leaf) {
 
 # Echo step: Start PaperCut Server
 Write-Host "Starting PaperCut Server..."
-Write-LogEntry -Message "Starting PaperCut Server, please wait 10 minutes for the installation to complete and start the service"
+Write-LogEntry -Message "Starting PaperCut Server, please wait."
 Start-Service -Name "PaperCut Application Server"
 
 
 # Wait for 10 minutes
-Start-Sleep -Seconds (10 * 60)
+# Start-Sleep -Seconds (10 * 60)
 
 # Get the current version number from version.txt
 $versionFilePath = Join-Path -Path $pcInstallationLocation -ChildPath "server\version.txt"
