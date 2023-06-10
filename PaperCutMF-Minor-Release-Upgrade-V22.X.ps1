@@ -40,6 +40,7 @@ function Write-LogEntry {
 # Echo step: Stop PaperCut Server
 Write-Host "Stopping PaperCut Server..."
 Write-LogEntry -Message "Stopping PaperCut Server"
+Stop-Service -Name "PaperCut Application Server"
 
 # Echo step: Create Backup Folder
 $backupFolder = Join-Path -Path $destinationPath -ChildPath "PaperCut MF"
@@ -89,6 +90,8 @@ if (Test-Path -Path $exePath -PathType Leaf) {
 # Echo step: Start PaperCut Server
 Write-Host "Starting PaperCut Server..."
 Write-LogEntry -Message "Starting PaperCut Server, please wait 10 minutes for the installation to complete and start the service"
+Start-Service -Name "PaperCut Application Server"
+
 
 # Wait for 10 minutes
 Start-Sleep -Seconds (10 * 60)
